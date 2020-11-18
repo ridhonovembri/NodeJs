@@ -1,0 +1,22 @@
+<html lang="en">
+
+<%- include("../partials/header.ejs") %>
+    <body>
+        <%- include("../partials/nav.ejs") %>
+        <div class="container">
+            <form style="margin: 5px;" id="employee-form" action="/employee" method="POST">
+                <label for="txtEmplSapId">SAP ID</label>
+                <input type="text" id="txtEmplSapId" name="txtEmplSapId" />
+                <label for="txtName">Name</label>
+                <input type="text" id="txtName" name="txtName" />
+                <input type="submit" value="Submit" />
+
+            </form> 
+        </div>
+    </body>
+
+<%- include("../partials/footer.ejs") %>
+
+</html>
+
+<%- include("../partials/scripts.ejs") %>

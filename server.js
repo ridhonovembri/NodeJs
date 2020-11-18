@@ -1,19 +1,13 @@
 const express = require('express');
 const app = express();
-const employeeController = require('./controllers/employeeController');
 
+const employeeRoutes = require('./routes/employeeRoutes');
+const homeRoutes = require('./routes/homeRoutes');
 
 app.set('view engine', 'ejs');
-
 app.use(express.static('./assets'));
 
+app.use(employeeRoutes);
+app.use(homeRoutes);
+
 app.listen(8000);
-
-app.get('/', (req, res) => {
-    res.render('index');
-})
-
-app.get('/about', (req, res) => {
-    res.render('about');
-})
-
